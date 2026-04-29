@@ -47,7 +47,7 @@ export default function Home() {
     },
     {
       title: "Jr Full Stack Developer",
-      company: "Agcollege",
+      company: "Academia global",
       period: "Noviembre 2013 - Julio 2019",
       description: "Implementación de nuevas funciones, corrección de errores, diseño de bases de datos, creación de nuevos servidores web.",
       technologies: ["PHP", "JavaScript", "MySQL", "PL/SQL", "AngularJS", "React"]
@@ -179,7 +179,7 @@ export default function Home() {
           <div className="text-center">
             <div className="mb-8">
               <Image
-                src="/avatar-placeholder.svg"
+                src="/avatar-placeholder.jpeg"
                 alt="Foto de Alejandro Aguilar"
                 width={150}
                 height={150}
