@@ -1,25 +1,8 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+import { Experience, Project, Skill } from "../types";
 
-// Tipos para TypeScript
-interface Experience {
-  title: string;
-  company: string;
-  period: string;
-  description: string;
-  technologies: string[];
-}
-
-interface Project {
-  title: string;
-  description: string;
-  technologies: string[];
-  year: string;
-}
-
-interface Skill {
-  name: string;
-  icon: string;
-}
 
 export default function Home() {
   // Calcular años de experiencia dinámicamente
@@ -124,6 +107,51 @@ export default function Home() {
       year: "2020-2021"
     },
   ];
+
+  // Estado para el formulario de contacto
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  // Función para manejar el envío del formulario
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitMessage('¡Mensaje enviado exitosamente! Me pondré en contacto contigo pronto.');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitMessage('Error al enviar el mensaje. Por favor, intenta de nuevo.');
+      }
+    } catch (error) {
+      setSubmitMessage('Error al enviar el mensaje. Por favor, intenta de nuevo.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Función para manejar cambios en los inputs
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
@@ -409,7 +437,7 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-sm">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
@@ -418,6 +446,9 @@ export default function Home() {
                   <input
                     type="text"
                     id="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-700 text-slate-900 dark:text-white"
                     placeholder="Tu nombre"
                   />
@@ -429,6 +460,9 @@ export default function Home() {
                   <input
                     type="email"
                     id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-700 text-slate-900 dark:text-white"
                     placeholder="tu@email.com"
                   />
@@ -441,15 +475,24 @@ export default function Home() {
                 <textarea
                   id="message"
                   rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-700 text-slate-900 dark:text-white"
                   placeholder="Cuéntame sobre tu proyecto..."
                 ></textarea>
               </div>
+              {submitMessage && (
+                <div className={`p-4 rounded-lg ${submitMessage.includes('exitosamente') ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200' : 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200'}`}>
+                  {submitMessage}
+                </div>
+              )}
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-colors"
+                disabled={isSubmitting}
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-3 px-6 rounded-lg font-medium transition-colors"
               >
-                Enviar mensaje
+                {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
               </button>
             </form>
           </div>
