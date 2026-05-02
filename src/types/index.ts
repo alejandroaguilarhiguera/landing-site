@@ -1,5 +1,6 @@
 // Tipos para TypeScript
 export interface Experience {
+  url?: string;
   title: string;
   company: string;
   period: string;
@@ -8,6 +9,7 @@ export interface Experience {
 }
 
 export interface Project {
+  slug: string;
   title: string;
   description: string;
   technologies: string[];

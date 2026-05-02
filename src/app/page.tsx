@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Experience, Project, Skill } from "../types";
-
+import Link from "next/link";
 
 export default function Home() {
   // Calcular años de experiencia dinámicamente
@@ -11,13 +11,15 @@ export default function Home() {
   const yearsOfExperience = currentYear - startYear;
   const experiences: Experience[] = [
     {
+      url: 'https://www.ey.com/',
       title: "Sr Front End Developer",
-      company: "Hexaware",
-      period: "Marzo 2025 - Presente",
+      company: "Earn & Young",
+      period: "Marzo 2025",
       description: "Agregar nuevos componentes en React, proponer soluciones de arquitectura.",
       technologies: ["React", "TypeScript", "Redux", "Vite", "Sass", "react-hook-form", "zod"]
     },
     {
+      url: 'https://adhocti.com/',
       title: "Sr Full Stack Developer",
       company: "Adhoc TI",
       period: "Septiembre 2024 - Marzo 2025",
@@ -25,20 +27,23 @@ export default function Home() {
       technologies: ["React", "TypeScript", "Next.js", "NestJS", "Sequelize", "Zod", "Tailwind", "Stripe"]
     },
     {
+      url: 'https://masttro.com/',
       title: "Sr Full Stack Developer",
-      company: "Onephase",
+      company: "Masttro",
       period: "Marzo 2023 - Septiembre 2024",
       description: "Implementar nuevas funciones, hacer pruebas automáticas end-to-end, pruebas unitarias, corregir errores, revisión de código.",
       technologies: ["React", "TypeScript", "Material-UI", "Redux", "Vite", "Sass", "react-hook-form", "yup"]
     },
     {
+      url: 'https://www.littletaller.com/',
       title: "Sr Tech Lead Developer",
-      company: "Gila Software",
+      company: "Little taller",
       period: "Junio 2022 - Febrero 2023",
       description: "Implementar nuevas funciones, hacer pruebas automáticas end-to-end, pruebas unitarias, corregir errores.",
       technologies: ["Node.js", "Express", "TypeScript", "Sequelize", "MySQL", "PostgreSQL", "Jest", "React", "Tailwind"]
     },
     {
+      url: 'https://adhocti.com/',
       title: "Middle Level Back-end Developer",
       company: "Adhoc TI",
       period: "Octubre 2019 - Mayo 2022",
@@ -48,6 +53,7 @@ export default function Home() {
     {
       title: "Jr Full Stack Developer",
       company: "Academia global",
+      url: 'https://academiaglobal.mx',
       period: "Noviembre 2013 - Julio 2019",
       description: "Implementación de nuevas funciones, corrección de errores, diseño de bases de datos, creación de nuevos servidores web.",
       technologies: ["PHP", "JavaScript", "MySQL", "PL/SQL", "AngularJS", "React"]
@@ -71,36 +77,42 @@ export default function Home() {
 
   const projects: Project[] = [
     {
+      slug: 'guiadehoy',
       title: "GuiaDeHoy.com",
       description: "Sistema de compra de entradas online para eventos, espectáculos y actuaciones. Incluye gestión SEO avanzada y escaneo automatizado de eventos externos.",
       technologies: ["React", "Next.js", "NestJS", "PostgreSQL", "Stripe"],
       year: "2024"
     },
     {
+      slug: 'manage-wealth',
       title: "Sistema de Gestión de Patrimonios",
       description: "Sistema que administra activos desde inversiones líquidas hasta bienes inmuebles y participaciones de capital privado. Migración completa de jQuery a React.",
       technologies: ["Python", "Selenium", "React", "Redux", "Highcharts"],
       year: "2024"
     },
     {
-      title: "Scratch",
-      description: "Plataforma para jóvenes emprendedores que proporciona herramientas para iniciar y dirigir negocios. Sistema multi-tenant con red social integrada.",
-      technologies: ["React", "Redux", "PHP", "Laravel", "MySQL"],
+      slug: 'enrolados',
+      title: "Enrolados",
+      description: "Enrolados es una plataforma empresarial de colaboración, comunicación y gestión. Realicé la reescritura completa del sistema porque la versión original no cumplía con el rendimiento esperado. El resultado fue una plataforma más estable, rápida y alineada con los procesos del negocio, con webapp en Next.js y apps móviles CRM en React Native.",
+      technologies: ["React", "Node.js", "Sequelize", "Express", "MySQL"],
       year: "2022-2023"
     },
     {
+      slug: 'blumi',
       title: "Blumi.App",
       description: "Aplicación para programar servicios de cuidado personal y belleza con altos estándares de higiene, entregados en la comodidad del hogar.",
       technologies: ["React", "Node.js", "MySQL", "Sequelize"],
       year: "2022"
     },
     {
+      slug: 'citicinemas',
       title: "Citicinemas",
       description: "Aplicación de cine mejorada que aumentó el rendimiento y las ventas de boletos mediante optimizaciones técnicas.",
       technologies: ["React", "Node.js", "MySQL", "Sequelize"],
       year: "2021-2022"
     },
     {
+      slug: 'kanda',
       title: "Kanda",
       description: "Aplicación para bloquear números molestos, identificar extorsionadores y evitar llamadas no deseadas. Más de 1000 números de spam denunciados.",
       technologies: ["React", "Node.js", "MySQL", "Sequelize"],
@@ -138,7 +150,7 @@ export default function Home() {
       } else {
         setSubmitMessage('Error al enviar el mensaje. Por favor, intenta de nuevo.');
       }
-    } catch (error) {
+    } catch {
       setSubmitMessage('Error al enviar el mensaje. Por favor, intenta de nuevo.');
     } finally {
       setIsSubmitting(false);
@@ -311,9 +323,12 @@ export default function Home() {
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                       {exp.title}
                     </h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-medium">
-                      {exp.company}
-                    </p>
+                    <a href={exp.url} target="_blank" rel="noopener noreferrer">
+
+                      <p className="text-blue-600 dark:text-blue-400 font-medium">
+                        {exp.company}
+                      </p>
+                    </a>
                   </div>
                   <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 md:mt-0">
                     {exp.period}
@@ -388,9 +403,12 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  <button className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+                  <Link
+                    href={`/project/${project.slug}`}
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+                  >
                     Ver proyecto →
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -433,6 +451,15 @@ export default function Home() {
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">LinkedIn</h3>
               <a href="https://www.linkedin.com/in/alejandro-a-640370116" className="text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400">
                 linkedin.com/in/alejandro-a-640370116
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-4">
+                <span className="text-gray-600 dark:text-gray-400 text-xl">🐙</span>
+              </div>
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">GitHub</h3>
+              <a href="https://github.com/alejandroaguilarhiguera" className="text-slate-600 dark:text-slate-300 hover:text-gray-600 dark:hover:text-gray-400">
+                alejandroaguilarhiguera
               </a>
             </div>
           </div>
