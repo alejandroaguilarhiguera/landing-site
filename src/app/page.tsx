@@ -1,9 +1,9 @@
-"use client";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
+import ExperienceCard from "@/components/ExperienceCard";
+import SkillCard from "@/components/SkillCard";
 import { Experience, Project, Skill } from "@/types";
-import Link from "next/link";
 
 export default function Home() {
   // Calcular años de experiencia dinámicamente
@@ -78,6 +78,7 @@ export default function Home() {
 
   const projects: Project[] = [
     {
+      img: "/guiadehoy-mockup.webp",
       slug: 'guiadehoy',
       title: "GuiaDeHoy.com",
       description: "Sistema de compra de entradas online para eventos, espectáculos y actuaciones. Incluye gestión SEO avanzada y escaneo automatizado de eventos externos.",
@@ -85,6 +86,7 @@ export default function Home() {
       year: "2024"
     },
     {
+      img: "/masttro-mock.avif",
       slug: 'manage-wealth',
       title: "Sistema de Gestión de Patrimonios",
       description: "Sistema que administra activos desde inversiones líquidas hasta bienes inmuebles y participaciones de capital privado. Migración completa de jQuery a React.",
@@ -92,6 +94,7 @@ export default function Home() {
       year: "2024"
     },
     {
+      img: "/enrolados-mockup.webp",
       slug: 'enrolados',
       title: "Enrolados",
       description: "Enrolados es una plataforma empresarial de colaboración, comunicación y gestión. Realicé la reescritura completa del sistema porque la versión original no cumplía con el rendimiento esperado. El resultado fue una plataforma más estable, rápida y alineada con los procesos del negocio, con webapp en Next.js y apps móviles CRM en React Native.",
@@ -99,6 +102,7 @@ export default function Home() {
       year: "2022-2023"
     },
     {
+      img: "/blumi-mockup.webp",
       slug: 'blumi',
       title: "Blumi.App",
       description: "Aplicación para programar servicios de cuidado personal y belleza con altos estándares de higiene, entregados en la comodidad del hogar.",
@@ -106,6 +110,7 @@ export default function Home() {
       year: "2022"
     },
     {
+      img: "/citicinemas-body-04.webp",
       slug: 'citicinemas',
       title: "Citicinemas",
       description: "Aplicación de cine mejorada que aumentó el rendimiento y las ventas de boletos mediante optimizaciones técnicas.",
@@ -113,6 +118,7 @@ export default function Home() {
       year: "2021-2022"
     },
     {
+      img: "/kanda-mockup.webp",
       slug: 'kanda',
       title: "Kanda",
       description: "Aplicación para bloquear números molestos, identificar extorsionadores y evitar llamadas no deseadas. Más de 1000 números de spam denunciados.",
@@ -252,7 +258,7 @@ export default function Home() {
                   Educación
                 </h4>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Bachelor's of Informatics - UAS (2009-2013)
+                  Bachelor&apos;s of Informatics - UAS (2009-2013)
                 </p>
               </div>
             </div>
@@ -272,35 +278,8 @@ export default function Home() {
             </p>
           </div>
           <div className="space-y-8">
-            {experiences.map((exp: Experience) => (
-              <div key={`${exp.company}-${exp.period}`} className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-                      {exp.title}
-                    </h3>
-                    <a href={exp.url} target="_blank" rel="noopener noreferrer">
-
-                      <p className="text-blue-600 dark:text-blue-400 font-medium">
-                        {exp.company}
-                      </p>
-                    </a>
-                  </div>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 md:mt-0">
-                    {exp.period}
-                  </p>
-                </div>
-                <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  {exp.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map((tech: string) => (
-                    <span key={tech} className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-sm">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            {experiences.map((experience: Experience) => (
+              <ExperienceCard key={`${experience.company}-${experience.period}`} {...experience} />
             ))}
           </div>
         </div>
@@ -319,10 +298,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {skills.map((skill: Skill) => (
-              <div key={skill.name} className="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-3xl mb-2">{skill.icon}</div>
-                <div className="font-medium text-slate-900 dark:text-white">{skill.name}</div>
-              </div>
+              <SkillCard key={skill.name} {...skill} />
             ))}
           </div>
         </div>

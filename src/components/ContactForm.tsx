@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 interface Form {
     name: string;
@@ -6,17 +7,15 @@ interface Form {
     message: string;
 }
 const ContactForm = () => {
-    // Estado para el formulario de contacto
     const [formData, setFormData] = useState<Form>({
         name: '',
         lastName: '',
         email: '',
-        message: ''
+        message: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState('');
 
-    // Función para manejar el envío del formulario
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);

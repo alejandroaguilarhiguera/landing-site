@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Project } from "@/types";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -6,7 +7,13 @@ const ProjectCard = (project: Project) => {
     return (
         <div className="bg-slate-50 dark:bg-slate-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-                <span className="text-white text-4xl">🚀</span>
+                <Image
+                    src={project.img}
+                    alt={project.title}
+                    width={400}
+                    height={200}
+                    className="object-contain w-full h-full"
+                />
             </div>
             <div className="p-6">
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
@@ -26,7 +33,7 @@ const ProjectCard = (project: Project) => {
                     href={`/project/${project.slug}`}
                     className="flex gap-2 items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
                 >
-                    Ver proyecto <FaArrowRight />
+                    Más detalle <FaArrowRight />
                 </Link>
             </div>
         </div>
