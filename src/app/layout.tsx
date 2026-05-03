@@ -2,31 +2,59 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Alejandro Aguilar Higuera - Full Stack Engineer",
-  description: "Portfolio de Alejandro Aguilar Higuera, desarrollador Full Stack con más de 13 años de experiencia en React, Node.js, MongoDB y MySQL.",
+  // Título ideal: Nombre + Skill Principal o Localización
+  title: "Alejandro Aguilar Higuera | Full Stack Engineer",
+  description: "Desarrollador Full Stack con más de 13 años de experiencia. Especialista en React, Node.js y arquitectura escalable para proyectos web robustos.",
+  keywords: ["Full Stack Developer", "React Specialist", "Node.js", "Web Development", "Software Architecture"],
+  authors: [{ name: "Alejandro Aguilar Higuera" }],
+  
+  // Para que el enlace se vea increíble al compartirlo
+  openGraph: {
+    title: "Alejandro Aguilar Higuera - Full Stack Engineer",
+    description: "Portafolio profesional de desarrollo web con 13 años de experiencia.",
+    url: "https://alexaguilar.dev",
+    siteName: "Alejandro Aguilar Portfolio",
+    images: [
+      {
+        url: "/avatar-placeholder-1200.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Preview de Alejandro Aguilar Higuera",
+      },
+    ],
+    locale: "es_MX",
+    type: "website",
+  },
+  
+  // Twitter / X
+  twitter: {
+    card: "summary_large_image",
+    title: "Alejandro Aguilar Higuera | Full Stack Engineer",
+    description: "Desarrollador Full Stack experto en React y Node.js.",
+    images: ["/avatar-placeholder-1200.jpeg"],
+  },
+
+  // Importante para evitar contenido duplicado
+  alternates: {
+    canonical: "https://alexaguilar.dev",
+  },
+  
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    // Cambia "en" por "es" si tu contenido es principalmente en español
+    <html lang="es" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
