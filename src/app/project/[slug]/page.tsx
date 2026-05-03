@@ -3,6 +3,7 @@ import Link from 'next/link';
 import path from 'path';
 import fs from 'fs';
 import Markdown from 'react-markdown';
+import { FaArrowLeft } from "react-icons/fa";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -22,8 +23,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
        <header className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
          <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="flex justify-between items-center py-4">
-             <Link href="/" className="text-xl font-bold text-slate-900 dark:text-white hover:text-blue-600 transition-colors">
-               ← Volver
+             <Link href="/" className="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white hover:text-blue-600 transition-colors">
+               <FaArrowLeft /> Volver
              </Link>
              <Link href="/" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">
                Inicio

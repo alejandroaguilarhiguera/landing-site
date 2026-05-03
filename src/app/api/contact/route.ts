@@ -14,8 +14,14 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, message } = await request.json();
-
+    const { name, lastName, email, message } = await request.json();
+    if (lastName &&  lastName.length > 0) {
+      // It's a bot
+      return NextResponse.json(
+        { message: 'Mensaje enviado exitosamente' },
+        { status: 200 }
+      );
+    }
     // Validación básica
     if (!name || !email || !message) {
       return NextResponse.json(
