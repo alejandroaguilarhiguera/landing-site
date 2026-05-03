@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
   try {
     const { name, lastName, email, message } = await request.json();
     if (lastName &&  lastName.length > 0) {
-      // It's a bot
+      // It's a bot or a spam attempt, ignore it
       return NextResponse.json(
         { message: 'Mensaje enviado exitosamente' },
         { status: 200 }
