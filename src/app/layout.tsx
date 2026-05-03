@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Alejandro Aguilar Portfolio",
     images: [
       {
-        url: "/avatar-placeholder-1200.jpeg",
+        url: "https://alexaguilar.dev/og-image.jpeg",
         width: 1200,
         height: 630,
         alt: "Preview de Alejandro Aguilar Higuera",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alejandro Aguilar Higuera | Full Stack Engineer",
     description: "Desarrollador Full Stack experto en React y Node.js.",
-    images: ["/avatar-placeholder-1200.jpeg"],
+    images: ["https://alexaguilar.dev/og-image.jpeg"],
   },
 
   // Importante para evitar contenido duplicado
