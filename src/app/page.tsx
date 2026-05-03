@@ -5,6 +5,43 @@ import ExperienceCard from "@/components/ExperienceCard";
 import SkillCard from "@/components/SkillCard";
 import { Experience, Project, Skill } from "@/types";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alejandro Aguilar Higuera",
+  "jobTitle": "Full Stack Engineer",
+  "url": "https://alexaguilar.dev",
+  "description": "Desarrollador Full Stack con 13 años de experiencia especializado en React, Node.js y AWS.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Culiacán",
+    "addressRegion": "Sinaloa",
+    "addressCountry": "MX"
+  },
+  "knowsAbout": [
+    "Web Development",
+    "React",
+    "Next.js",
+    "NestJS",
+    "Cloud Computing",
+    "Software Architecture"
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Universidad autonoma de Sinaloa"
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Cloud Practitioner Essentials"
+    }
+  ],
+  "sameAs": [
+    "https://github.com/alejandroaguilarhiguera",
+    "https://www.linkedin.com/in/alejandro-a-640370116"
+  ]
+};
+
 export default function Home() {
   // Calcular años de experiencia dinámicamente
   const startYear = 2013;
@@ -130,6 +167,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       {/* Header/Navigation */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
         <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
