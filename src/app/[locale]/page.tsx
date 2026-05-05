@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import SkillCard from "@/components/SkillCard";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 import { Experience, Project, Skill } from "@/types";
 
 const jsonLd = {
@@ -13,9 +16,9 @@ const jsonLd = {
   "url": "https://alexaguilar.dev",
   "description": "Desarrollador Full Stack con 13 años de experiencia especializado en React, Node.js y AWS.",
   "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Culiacán",
-    "addressRegion": "Sinaloa",
+      "@type": "PostalAddress",
+      "addressLocality": "Culiacán",
+      "addressRegion": "Sinaloa",
     "addressCountry": "MX"
   },
   "knowsAbout": [
@@ -43,7 +46,7 @@ const jsonLd = {
 };
 
 export default function Home() {
-  // Calcular años de experiencia dinámicamente
+  const t = useTranslations('home');
   const startYear = 2013;
   const currentYear = new Date().getFullYear();
   const yearsOfExperience = currentYear - startYear;
@@ -178,13 +181,14 @@ export default function Home() {
               Alejandro Aguilar Higuera
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#about" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Sobre mí</a>
-              <a href="#experience" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Experiencia</a>
-              <a href="#skills" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Habilidades</a>
-              <a href="#projects" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Proyectos</a>
-              <a href="#contact" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Contacto</a>
-              <a href="/blog" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Blog</a>
+              <a href="#about" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">{t('navigation.about')}</a>
+              <a href="#experience" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">{t('navigation.experience')}</a>
+              <a href="#skills" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">{t('navigation.skills')}</a>
+              <a href="#projects" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">{t('navigation.projects')}</a>
+              <a href="#contact" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">{t('navigation.contact')}</a>
+              <Link href="/blog" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">{t('navigation.blog')}</Link>
             </div>
+            <LocaleSwitcher />
           </div>
         </nav>
       </header>
@@ -203,7 +207,7 @@ export default function Home() {
               />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
-              Hola, soy <span className="text-blue-600 dark:text-blue-400">Alejandro Aguilar</span>
+              {t('hero.title')} <span className="text-blue-600 dark:text-blue-400">Alejandro Aguilar</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8">
               Full Stack Engineer

@@ -1,0 +1,15 @@
+{
+    "home": {
+        "navigation": {
+            "about": "Sobre mí",
+            "experience": "Experiencia",
+            "skills": "Habilidades",
+            "projects": "Proyectos",
+            "contact": "Contacto",
+            "blog": "Blog"
+        },
+        "hero": {
+            "title": "Hola, soy"
+        }
+    }
+}
