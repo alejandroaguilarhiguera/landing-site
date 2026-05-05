@@ -52,12 +52,11 @@ export default function LocaleSwitcher() {
 
   const current = locales.find((l) => l.code === locale) ?? locales[0];
 
-  const handleChange = (newLocale: string) => {
-    const segments = pathname.split('/');
-    segments[1] = newLocale;
-    router.push(segments.join('/'));
-    setOpen(false);
-  };
+const handleChange = (newLocale: string) => {
+  const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+  router.push(newPath);
+  setOpen(false);
+};
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {

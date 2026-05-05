@@ -1,0 +1,61 @@
+{
+    "home": {
+        "navigation": {
+            "about": "Sobre mim",
+            "experience": "Experiência",
+            "skills": "Habilidades",
+            "projects": "Projetos",
+            "contact": "Contato",
+            "blog": "Blog"
+        },
+        "hero": {
+            "title": "Olá, eu sou",
+            "subtitle": "Full Stack Engineer",
+            "description": "Desenvolvedor de software com mais de {yearsOfExperience} anos de experiência no design e desenvolvimento de aplicações web e móveis. Especializado em React, Node.js, MongoDB, MySQL, microsserviços e automação CI/CD com Docker.",
+            "viewWork": "Ver meus trabalhos",
+            "contact": "Contatar"
+        },
+        "about": {
+            "title": "Sobre mim",
+            "subtitle": "Minha paixão pelo desenvolvimento web começou há mais de {yearsOfExperience} anos...",
+            "approach": "Minha abordagem",
+            "location": "Localização",
+            "locationValue": "Culiacán, Sinaloa, México",
+            "visaStatus": "Status do visto",
+            "visaValue": "Ativo B1/B2",
+            "languages": "Idiomas",
+            "languagesValue": "Espanhol (Nativo), Inglês (B1/B2 Profissional)",
+            "description1": "Sou um desenvolvedor de software com mais de 13 anos de experiência, trabalhei no design e desenvolvimento de aplicações web e móveis usando tecnologias como React, Node.js, MongoDB e MySQL. Tenho experiência na criação de microsserviços e automação de pipelines CI/CD com ferramentas como Docker.",
+            "description2": "Aspiro trabalhar em uma empresa inovadora onde possa aproveitar minha experiência técnica para melhorar a experiência do usuário e contribuir para o crescimento do negócio. Trabalhei com startups e empresas estabelecidas, ajudando-as a transformar suas ideias em produtos digitais de sucesso.",
+            "experience": "Experiência",
+            "experienceValue": "Mais de {yearsOfExperience} anos de experiência em desenvolvimento web",
+            "projects": "Projetos concluídos",
+            "projectsValue": "Mais de 10 projetos bem-sucedidos",
+            "education": "Educação",
+            "educationValue": "Bacharelado em Informática - UAS (2009-2013)"
+        },
+        "experience": {
+            "title": "Experiência profissional",
+            "subtitle": "Minha jornada profissional"
+        },
+        "skills": {
+            "title": "Habilidades técnicas",
+            "subtitle": "Tecnologias e ferramentas que domino"
+        },
+        "projects": {
+            "title": "Projetos em destaque",
+            "subtitle": "Alguns dos meus trabalhos mais recentes"
+        },
+        "contact": {
+            "title": "Vamos falar sobre seu projeto?",
+            "subtitle": "Estou disponível para discutir novas oportunidades e colaborações.",
+            "email": "Email",
+            "whatsapp": "WhatsApp",
+            "linkedin": "LinkedIn",
+            "github": "GitHub"
+        },
+        "footer": {
+            "copyright": "© {year} Alejandro Aguilar Higuera. Todos os direitos reservados."
+        }
+    }
+}

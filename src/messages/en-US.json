@@ -9,7 +9,53 @@
             "blog": "Blog"
         },
         "hero": {
-            "title": "Hello, I'm"
+            "title": "Hello, I'm",
+            "subtitle": "Full Stack Engineer",
+            "description": "Software developer with over {yearsOfExperience} years of experience in designing and developing web and mobile applications. Specialized in React, Node.js, MongoDB, MySQL, microservices and CI/CD automation with Docker.",
+            "viewWork": "View my work",
+            "contact": "Contact"
+        },
+        "about": {
+            "title": "About me",
+            "subtitle": "My passion for web development started over {yearsOfExperience} years ago...",
+            "approach": "My approach",
+            "location": "Location",
+            "locationValue": "Culiacán, Sinaloa, Mexico",
+            "visaStatus": "Visa Status",
+            "visaValue": "Active B1/B2",
+            "languages": "Languages",
+            "languagesValue": "Spanish (Native), English (B1/B2 Professional)",
+            "description1": "I am a software developer with over 13 years of experience, I have worked in the design and development of web and mobile applications using technologies such as React, Node.js, MongoDB and MySQL. I have experience in creating microservices and CI/CD pipeline automation with tools like Docker.",
+            "description2": "I aspire to work in an innovative company where I can leverage my technical experience to improve user experience and contribute to business growth. I have worked with startups and established companies, helping them transform their ideas into successful digital products.",
+            "experience": "Experience",
+            "experienceValue": "Over {yearsOfExperience} years of web development experience",
+            "projects": "Completed Projects",
+            "projectsValue": "Over 10 successful projects",
+            "education": "Education",
+            "educationValue": "Bachelor's of Informatics - UAS (2009-2013)"
+        },
+        "experience": {
+            "title": "Professional Experience",
+            "subtitle": "My professional journey"
+        },
+        "skills": {
+            "title": "Technical Skills",
+            "subtitle": "Technologies and tools I master"
+        },
+        "projects": {
+            "title": "Featured Projects",
+            "subtitle": "Some of my most recent work"
+        },
+        "contact": {
+            "title": "Let's talk about your project?",
+            "subtitle": "I'm available to discuss new opportunities and collaborations.",
+            "email": "Email",
+            "whatsapp": "WhatsApp",
+            "linkedin": "LinkedIn",
+            "github": "GitHub"
+        },
+        "footer": {
+            "copyright": "© {year} Alejandro Aguilar Higuera. All rights reserved."
         }
     }
 }

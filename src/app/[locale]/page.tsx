@@ -16,9 +16,9 @@ const jsonLd = {
   "url": "https://alexaguilar.dev",
   "description": "Desarrollador Full Stack con 13 años de experiencia especializado en React, Node.js y AWS.",
   "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Culiacán",
-      "addressRegion": "Sinaloa",
+    "@type": "PostalAddress",
+    "addressLocality": "Culiacán",
+    "addressRegion": "Sinaloa",
     "addressCountry": "MX"
   },
   "knowsAbout": [
@@ -210,24 +210,23 @@ export default function Home() {
               {t('hero.title')} <span className="text-blue-600 dark:text-blue-400">Alejandro Aguilar</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8">
-              Full Stack Engineer
+              {t('hero.subtitle')}
             </p>
             <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-8">
-              Desarrollador de software con más de {yearsOfExperience} años de experiencia en el diseño y desarrollo de aplicaciones web y móviles.
-              Especializado en React, Node.js, MongoDB, MySQL, microservicios y automatización CI/CD con Docker.
+              {t('hero.description', { yearsOfExperience })}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#projects"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
               >
-                Ver mis trabajos
+                {t('hero.viewWork')}
               </a>
               <a
                 href="#contact"
                 className="border border-slate-300 dark:border-slate-600 hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white px-8 py-3 rounded-lg font-medium transition-colors"
               >
-                Contactar
+                {t('hero.contact')}
               </a>
             </div>
           </div>
@@ -239,33 +238,33 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              Sobre mí
+              {t('about.title')}
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              Mi pasión por el desarrollo web comenzó hace más de {yearsOfExperience} años...
+              {t('about.subtitle', { yearsOfExperience })}
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
-                Mi enfoque
+                {t('about.approach')}
               </h3>
               <div className="mb-6">
                 <p className="text-slate-600 dark:text-slate-300 mb-2">
-                  <strong>Ubicación:</strong> Culiacán, Sinaloa, México
+                  <strong>{t('about.location')}:</strong> {t('about.locationValue')}
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mb-2">
-                  <strong>Visa Status:</strong> Activo B1/B2
+                  <strong>{t('about.visaStatus')}:</strong> {t('about.visaValue')}
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mb-2">
-                  <strong>Idiomas:</strong> Español (Nativo), Inglés (B1/B2 Professional)
+                  <strong>{t('about.languages')}:</strong> {t('about.languagesValue')}
                 </p>
               </div>
               <p className="text-slate-600 dark:text-slate-300 mb-6">
-                Soy un desarrollador de software con más de 13 años de experiencia, he trabajado en el diseño y desarrollo de aplicaciones web y móviles utilizando tecnologías como React, Node.js, MongoDB y MySQL. Tengo experiencia en la creación de microservicios y automatización de pipelines CI/CD con herramientas como Docker.
+                {t('about.description1')}
               </p>
               <p className="text-slate-600 dark:text-slate-300 mb-6">
-                Aspiro a trabajar en una empresa innovadora donde pueda aprovechar mi experiencia técnica para mejorar la experiencia del usuario y contribuir al crecimiento del negocio. He trabajado con startups y empresas establecidas, ayudándoles a transformar sus ideas en productos digitales exitosos.
+                {t('about.description2')}
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">
@@ -285,26 +284,26 @@ export default function Home() {
             <div className="space-y-6">
               <div className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
                 <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                  Experiencia
+                  {t('about.experience')}
                 </h4>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Más de {yearsOfExperience} años de experiencia en desarrollo web
+                  {t('about.experienceValue', { yearsOfExperience })}
                 </p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
                 <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                  Proyectos Completados
+                  {t('about.projects')}
                 </h4>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Más de 10 proyectos exitosos
+                  {t('about.projectsValue')}
                 </p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
                 <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                  Educación
+                  {t('about.education')}
                 </h4>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Bachelor&apos;s of Informatics - UAS (2009-2013)
+                  {t('about.educationValue')}
                 </p>
               </div>
             </div>
@@ -317,10 +316,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              Experiencia Profesional
+              {t('experience.title')}
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300">
-              Mi trayectoria profesional
+              {t('experience.subtitle')}
             </p>
           </div>
           <div className="space-y-8">
@@ -336,10 +335,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              Habilidades Técnicas
+              {t('skills.title')}
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300">
-              Tecnologías y herramientas que domino
+              {t('skills.subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -355,10 +354,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              Proyectos Destacados
+              {t('projects.title')}
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300">
-              Algunos de mis trabajos más recientes
+              {t('projects.subtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -373,17 +372,17 @@ export default function Home() {
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            ¿Hablamos de tu proyecto?
+            {t('contact.title')}
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">
-            Estoy disponible para discutir nuevas oportunidades y colaboraciones.
+            {t('contact.subtitle')}
           </p>
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-4">
                 <span className="text-blue-600 dark:text-blue-400 text-xl">📧</span>
               </div>
-              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Email</h3>
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{t('contact.email')}</h3>
               <a href="mailto:alejandro.aguilar.higuera@gmail.com" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
                 alejandro.aguilar.higuera@gmail.com
               </a>
@@ -392,7 +391,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-4">
                 <span className="text-green-600 dark:text-green-400 text-xl">💬</span>
               </div>
-              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">WhatsApp</h3>
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{t('contact.whatsapp')}</h3>
               <a href="https://wa.me/526677769637" className="text-slate-600 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400">
                 +52 667 776 9637
               </a>
@@ -401,7 +400,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-4">
                 <span className="text-purple-600 dark:text-purple-400 text-xl">🔗</span>
               </div>
-              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">LinkedIn</h3>
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{t('contact.linkedin')}</h3>
               <a href="https://www.linkedin.com/in/alejandro-a-640370116" className="text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400">
                 linkedin.com/in/alejandro-a-640370116
               </a>
@@ -410,7 +409,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-4">
                 <span className="text-gray-600 dark:text-gray-400 text-xl">🐙</span>
               </div>
-              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">GitHub</h3>
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{t('contact.github')}</h3>
               <a href="https://github.com/alejandroaguilarhiguera" className="text-slate-600 dark:text-slate-300 hover:text-gray-600 dark:hover:text-gray-400">
                 alejandroaguilarhiguera
               </a>
@@ -426,7 +425,7 @@ export default function Home() {
       <footer className="bg-slate-900 text-white py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-slate-400">
-            © {new Date().getFullYear()} Alejandro Aguilar Higuera. Todos los derechos reservados.
+            {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
         </div>
       </footer>

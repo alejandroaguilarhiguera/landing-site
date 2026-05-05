@@ -9,7 +9,53 @@
             "blog": "Blog"
         },
         "hero": {
-            "title": "Hola, soy"
+            "title": "Hola, soy",
+            "subtitle": "Full Stack Engineer",
+            "description": "Desarrollador de software con más de {yearsOfExperience} años de experiencia en el diseño y desarrollo de aplicaciones web y móviles. Especializado en React, Node.js, MongoDB, MySQL, microservicios y automatización CI/CD con Docker.",
+            "viewWork": "Ver mis trabajos",
+            "contact": "Contactar"
+        },
+        "about": {
+            "title": "Sobre mí",
+            "subtitle": "Mi pasión por el desarrollo web comenzó hace más de {yearsOfExperience} años...",
+            "approach": "Mi enfoque",
+            "location": "Ubicación",
+            "locationValue": "Culiacán, Sinaloa, México",
+            "visaStatus": "Visa Status",
+            "visaValue": "Activo B1/B2",
+            "languages": "Idiomas",
+            "languagesValue": "Español (Nativo), Inglés (B1/B2 Professional)",
+            "description1": "Soy un desarrollador de software con más de 13 años de experiencia, he trabajado en el diseño y desarrollo de aplicaciones web y móviles utilizando tecnologías como React, Node.js, MongoDB y MySQL. Tengo experiencia en la creación de microservicios y automatización de pipelines CI/CD con herramientas como Docker.",
+            "description2": "Aspiro a trabajar en una empresa innovadora donde pueda aprovechar mi experiencia técnica para mejorar la experiencia del usuario y contribuir al crecimiento del negocio. He trabajado con startups y empresas establecidas, ayudándoles a transformar sus ideas en productos digitales exitosos.",
+            "experience": "Experiencia",
+            "experienceValue": "Más de {yearsOfExperience} años de experiencia en desarrollo web",
+            "projects": "Proyectos Completados",
+            "projectsValue": "Más de 10 proyectos exitosos",
+            "education": "Educación",
+            "educationValue": "Bachelor's of Informatics - UAS (2009-2013)"
+        },
+        "experience": {
+            "title": "Experiencia Profesional",
+            "subtitle": "Mi trayectoria profesional"
+        },
+        "skills": {
+            "title": "Habilidades Técnicas",
+            "subtitle": "Tecnologías y herramientas que domino"
+        },
+        "projects": {
+            "title": "Proyectos Destacados",
+            "subtitle": "Algunos de mis trabajos más recientes"
+        },
+        "contact": {
+            "title": "¿Hablamos de tu proyecto?",
+            "subtitle": "Estoy disponible para discutir nuevas oportunidades y colaboraciones.",
+            "email": "Email",
+            "whatsapp": "WhatsApp",
+            "linkedin": "LinkedIn",
+            "github": "GitHub"
+        },
+        "footer": {
+            "copyright": "© {year} Alejandro Aguilar Higuera. Todos los derechos reservados."
         }
     }
 }

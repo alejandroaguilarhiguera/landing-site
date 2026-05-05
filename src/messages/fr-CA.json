@@ -1,0 +1,61 @@
+{
+    "home": {
+        "navigation": {
+            "about": "À propos de moi",
+            "experience": "Expérience",
+            "skills": "Compétences",
+            "projects": "Projets",
+            "contact": "Contact",
+            "blog": "Blog"
+        },
+        "hero": {
+            "title": "Bonjour, je suis",
+            "subtitle": "Full Stack Engineer",
+            "description": "Développeur de logiciels avec plus de {yearsOfExperience} années d'expérience dans la conception et le développement d'applications web et mobiles. Spécialisé en React, Node.js, MongoDB, MySQL, microservices et automatisation CI/CD avec Docker.",
+            "viewWork": "Voir mes travaux",
+            "contact": "Contacter"
+        },
+        "about": {
+            "title": "À propos de moi",
+            "subtitle": "Ma passion pour le développement web a commencé il y a plus de {yearsOfExperience} ans...",
+            "approach": "Mon approche",
+            "location": "Emplacement",
+            "locationValue": "Culiacán, Sinaloa, Mexique",
+            "visaStatus": "Statut de visa",
+            "visaValue": "Actif B1/B2",
+            "languages": "Langues",
+            "languagesValue": "Espagnol (Natif), Anglais (B1/B2 Professionnel)",
+            "description1": "Je suis un développeur de logiciels avec plus de 13 ans d'expérience, j'ai travaillé dans la conception et le développement d'applications web et mobiles utilisant des technologies telles que React, Node.js, MongoDB et MySQL. J'ai de l'expérience dans la création de microservices et l'automatisation des pipelines CI/CD avec des outils comme Docker.",
+            "description2": "J'aspire à travailler dans une entreprise innovante où je peux tirer parti de mon expérience technique pour améliorer l'expérience utilisateur et contribuer à la croissance de l'entreprise. J'ai travaillé avec des startups et des entreprises établies, les aidant à transformer leurs idées en produits numériques réussis.",
+            "experience": "Expérience",
+            "experienceValue": "Plus de {yearsOfExperience} années d'expérience en développement web",
+            "projects": "Projets terminés",
+            "projectsValue": "Plus de 10 projets réussis",
+            "education": "Éducation",
+            "educationValue": "Baccalauréat en Informatique - UAS (2009-2013)"
+        },
+        "experience": {
+            "title": "Expérience professionnelle",
+            "subtitle": "Mon parcours professionnel"
+        },
+        "skills": {
+            "title": "Compétences techniques",
+            "subtitle": "Technologies et outils que je maîtrise"
+        },
+        "projects": {
+            "title": "Projets en vedette",
+            "subtitle": "Quelques-uns de mes travaux les plus récents"
+        },
+        "contact": {
+            "title": "Parlons de votre projet ?",
+            "subtitle": "Je suis disponible pour discuter de nouvelles opportunités et collaborations.",
+            "email": "Email",
+            "whatsapp": "WhatsApp",
+            "linkedin": "LinkedIn",
+            "github": "GitHub"
+        },
+        "footer": {
+            "copyright": "© {year} Alejandro Aguilar Higuera. Tous droits réservés."
+        }
+    }
+}
