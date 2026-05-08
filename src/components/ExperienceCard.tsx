@@ -1,4 +1,5 @@
 import { Experience } from "@/types";
+import Markdown from 'react-markdown';
 
 const ExperienceCard = (experience: Experience) => {
     return (
@@ -20,7 +21,7 @@ const ExperienceCard = (experience: Experience) => {
                   </p>
                 </div>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  {experience.description}
+                  <Markdown>{experience.description}</Markdown>
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {experience.technologies.map((tech) => (

@@ -6,6 +6,7 @@ export interface Experience {
   period: string;
   description: string;
   technologies: string[];
+  key: string;
 }
 
 export interface Project {

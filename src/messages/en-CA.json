@@ -54,6 +54,22 @@
             "linkedin": "LinkedIn",
             "github": "GitHub"
         },
+        "experiences": {
+            "hexaware": "Global IT services and digital consulting company offering solutions in automation, software development, artificial intelligence, data analytics, and digital transformation. Serves clients in sectors such as banking, insurance, healthcare, and retail, focusing on improving operational efficiency and customer experience through technology.",
+            "adhoc-ti-2024": "Company based in Culiacán Sinaloa, Mexico, specialized in providing technological solutions to companies and entrepreneurs. We use cutting-edge technologies like React, Node Nest, PostgreSQL to design products that exceed expectations and facilitate business growth. Activities: Build REST APIs using NestJS modular approach, define relational database models and schemas with Sequelize, map tables to TypeScript objects, create and execute database migrations to manage schema changes in a controlled manner, as well as develop interfaces with SSR/SSG, typed components, handle API routes for backend logic, and optimize performance and SEO.",
+            "masttro": "A financial technology company (WealthTech) specialized in platforms for wealth management and family offices. Its software centralizes, analyzes, and visualizes complex financial information and assets for high-net-worth clients, integrating automation, reporting, and AI-based tools. Activities: Implement new features, perform automated end-to-end testing, unit testing, fix bugs, code review and approval of pull requests or merge requests.",
+            "little-taller": "Little Taller is a technology and software development agency focused on UX/UI design, web and application development, automation, enterprise platforms, and digital solutions for marketing, sales, and product management. Works with companies on custom software projects, system integration, and AI-based tools.",
+            "adhoc-ti-2019": "Custom software development company specialized in creating e-commerce solutions for companies and entrepreneurs, has a team of experts that works closely with its clients to design and develop scalable and intuitive e-commerce platforms, using cutting-edge technologies to provide an exceptional user experience. Activities: Implement new features, perform automated end-to-end testing, unit testing, fix bugs.",
+            "academia-global": "Company specialized in providing personalized online academic training for companies. They offer training and development programs adapted to the specific needs of each organization, enhancing the growth and efficiency of their work teams. Role: Junior full stack developer, Linux administrator, and database administrator. Activities: Implementation of new features, bug fixing, database design, creation of new web servers."
+        },
+        "projects": {
+            "guiadehoy": "Online ticket purchase system for events, shows, and performances. Includes advanced SEO management and automated scanning of external events.",
+            "manage-wealth": "System that manages assets from liquid investments to real estate and private equity holdings. Complete migration from jQuery to React.",
+            "enrolados": "Enrolados is an enterprise collaboration, communication, and management platform. I performed a complete rewrite of the system because the original version did not meet the expected performance. The result was a more stable, fast platform aligned with business processes, with webapp in Next.js and mobile CRM apps in React Native.",
+            "blumi": "Application to schedule personal care and beauty services with high hygiene standards, delivered in the comfort of home.",
+            "citicinemas": "Enhanced cinema application that increased performance and ticket sales through technical optimizations.",
+            "kanda": "Application to block annoying numbers, identify extortionists, and avoid unwanted calls. More than 1000 spam numbers reported."
+        },
         "footer": {
             "copyright": "© {year} Alejandro Aguilar Higuera. All rights reserved."
         }

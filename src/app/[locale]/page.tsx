@@ -54,50 +54,56 @@ export default function Home() {
     {
       url: 'https://www.ey.com/',
       title: "Sr Front End Developer",
-      company: "Earn & Young",
+      company: "Hexaware",
       period: "Marzo 2025",
-      description: "Agregar nuevos componentes en React, proponer soluciones de arquitectura.",
-      technologies: ["React", "TypeScript", "Redux", "Vite", "Sass", "react-hook-form", "zod"]
+      description: t('home.experiences.hexaware'),
+      technologies: ["React", "TypeScript", "Redux", "Vite", "Sass", "react-hook-form", "zod"],
+      key: "hexaware"
     },
     {
       url: 'https://adhocti.com/',
       title: "Sr Full Stack Developer",
       company: "Adhoc TI",
       period: "Septiembre 2024 - Marzo 2025",
-      description: "Construir APIs REST con NestJS, definir modelos de bases de datos relacionales con Sequelize, desarrollar interfaces con SSR/SSG.",
-      technologies: ["React", "TypeScript", "Next.js", "NestJS", "Sequelize", "Zod", "Tailwind", "Stripe"]
+      description: t('home.experiences.adhoc-ti-2024'),
+      technologies: ["React", "TypeScript", "Next.js", "NestJS", "Sequelize", "Zod", "Tailwind", "Stripe"],
+      key: "adhoc-ti-2024"
     },
     {
       url: 'https://masttro.com/',
       title: "Sr Full Stack Developer",
       company: "Masttro",
       period: "Marzo 2023 - Septiembre 2024",
-      description: "Implementar nuevas funciones, hacer pruebas automáticas end-to-end, pruebas unitarias, corregir errores, revisión de código.",
-      technologies: ["React", "TypeScript", "Material-UI", "Redux", "Vite", "Sass", "react-hook-form", "yup"]
+      description: t('home.experiences.masttro'),
+      technologies: ["React", "TypeScript", "Material-UI", "Redux", "Vite", "Sass", "react-hook-form", "yup"],
+      key: "masttro"
     },
     {
       url: 'https://www.littletaller.com/',
       title: "Sr Tech Lead Developer",
       company: "Little taller",
       period: "Junio 2022 - Febrero 2023",
-      description: "Implementar nuevas funciones, hacer pruebas automáticas end-to-end, pruebas unitarias, corregir errores.",
-      technologies: ["Node.js", "Express", "TypeScript", "Sequelize", "MySQL", "PostgreSQL", "Jest", "React", "Tailwind"]
+      description: t('home.experiences.little-taller'),
+      technologies: ["Node.js", "Express", "TypeScript", "Sequelize", "MySQL", "PostgreSQL", "Jest", "React", "Tailwind"],
+      key: "little-taller"
     },
     {
       url: 'https://adhocti.com/',
       title: "Middle Level Back-end Developer",
       company: "Adhoc TI",
       period: "Octubre 2019 - Mayo 2022",
-      description: "Implementar nuevas funciones, realizar pruebas automáticas end-to-end, pruebas unitarias, corregir errores.",
-      technologies: ["Node.js", "Express", "TypeScript", "Sequelize", "MySQL", "PostgreSQL", "Jest", "React", "Tailwind"]
+      description: t('home.experiences.adhoc-ti-2019'),
+      technologies: ["Node.js", "Express", "TypeScript", "Sequelize", "MySQL", "PostgreSQL", "Jest", "React", "Tailwind"],
+      key: "adhoc-ti-2019"
     },
     {
       title: "Jr Full Stack Developer",
       company: "Academia global",
       url: 'https://academiaglobal.mx',
       period: "Noviembre 2013 - Julio 2019",
-      description: "Implementación de nuevas funciones, corrección de errores, diseño de bases de datos, creación de nuevos servidores web.",
-      technologies: ["PHP", "JavaScript", "MySQL", "PL/SQL", "AngularJS", "React"]
+      description: t('home.experiences.academia-global'),
+      technologies: ["PHP", "JavaScript", "MySQL", "PL/SQL", "AngularJS", "React"],
+      key: "academia-global"
     }
   ];
 
@@ -121,7 +127,7 @@ export default function Home() {
       img: "/guiadehoy-mockup.webp",
       slug: 'guiadehoy',
       title: "GuiaDeHoy.com",
-      description: "Sistema de compra de entradas online para eventos, espectáculos y actuaciones. Incluye gestión SEO avanzada y escaneo automatizado de eventos externos.",
+      description: t('home.projects.guiadehoy'),
       technologies: ["React", "Next.js", "NestJS", "PostgreSQL", "Stripe"],
       year: "2024"
     },
@@ -129,7 +135,7 @@ export default function Home() {
       img: "/masttro-mock.avif",
       slug: 'manage-wealth',
       title: "Sistema de Gestión de Patrimonios",
-      description: "Sistema que administra activos desde inversiones líquidas hasta bienes inmuebles y participaciones de capital privado. Migración completa de jQuery a React.",
+      description: t('home.projects.manage-wealth'),
       technologies: ["Python", "Selenium", "React", "Redux", "Highcharts"],
       year: "2024"
     },
@@ -137,7 +143,7 @@ export default function Home() {
       img: "/enrolados-mockup.webp",
       slug: 'enrolados',
       title: "Enrolados",
-      description: "Enrolados es una plataforma empresarial de colaboración, comunicación y gestión. Realicé la reescritura completa del sistema porque la versión original no cumplía con el rendimiento esperado. El resultado fue una plataforma más estable, rápida y alineada con los procesos del negocio, con webapp en Next.js y apps móviles CRM en React Native.",
+      description: t('home.projects.enrolados'),
       technologies: ["React", "Node.js", "Sequelize", "Express", "MySQL"],
       year: "2022-2023"
     },
@@ -145,7 +151,7 @@ export default function Home() {
       img: "/blumi-mockup.webp",
       slug: 'blumi',
       title: "Blumi.App",
-      description: "Aplicación para programar servicios de cuidado personal y belleza con altos estándares de higiene, entregados en la comodidad del hogar.",
+      description: t('home.projects.blumi'),
       technologies: ["React", "Node.js", "MySQL", "Sequelize"],
       year: "2022"
     },
@@ -153,7 +159,7 @@ export default function Home() {
       img: "/citicinemas-body-04.webp",
       slug: 'citicinemas',
       title: "Citicinemas",
-      description: "Aplicación de cine mejorada que aumentó el rendimiento y las ventas de boletos mediante optimizaciones técnicas.",
+      description: t('home.projects.citicinemas'),
       technologies: ["React", "Node.js", "MySQL", "Sequelize"],
       year: "2021-2022"
     },
@@ -161,7 +167,7 @@ export default function Home() {
       img: "/kanda-mockup.webp",
       slug: 'kanda',
       title: "Kanda",
-      description: "Aplicación para bloquear números molestos, identificar extorsionadores y evitar llamadas no deseadas. Más de 1000 números de spam denunciados.",
+      description: t('home.projects.kanda'),
       technologies: ["React", "Node.js", "MySQL", "Sequelize"],
       year: "2020-2021"
     },
@@ -323,9 +329,10 @@ export default function Home() {
             </p>
           </div>
           <div className="space-y-8">
-            {experiences.map((experience: Experience) => (
-              <ExperienceCard key={`${experience.company}-${experience.period}`} {...experience} />
-            ))}
+            {experiences.map((experience: Experience) => {
+              const { key, ...rest } = experience;
+              return <ExperienceCard key={key} {...rest} />;
+            })}
           </div>
         </div>
       </section>
