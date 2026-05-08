@@ -56,7 +56,7 @@ export default function Home() {
       title: "Sr Front End Developer",
       company: "Hexaware",
       period: "Marzo 2025",
-      description: t('home.experiences.hexaware'),
+      description: t('experiences.hexaware'),
       technologies: ["React", "TypeScript", "Redux", "Vite", "Sass", "react-hook-form", "zod"],
       key: "hexaware"
     },
@@ -65,7 +65,7 @@ export default function Home() {
       title: "Sr Full Stack Developer",
       company: "Adhoc TI",
       period: "Septiembre 2024 - Marzo 2025",
-      description: t('home.experiences.adhoc-ti-2024'),
+      description: t('experiences.adhoc-ti-2024'),
       technologies: ["React", "TypeScript", "Next.js", "NestJS", "Sequelize", "Zod", "Tailwind", "Stripe"],
       key: "adhoc-ti-2024"
     },
@@ -74,7 +74,7 @@ export default function Home() {
       title: "Sr Full Stack Developer",
       company: "Masttro",
       period: "Marzo 2023 - Septiembre 2024",
-      description: t('home.experiences.masttro'),
+      description: t('experiences.masttro'),
       technologies: ["React", "TypeScript", "Material-UI", "Redux", "Vite", "Sass", "react-hook-form", "yup"],
       key: "masttro"
     },
@@ -83,7 +83,7 @@ export default function Home() {
       title: "Sr Tech Lead Developer",
       company: "Little taller",
       period: "Junio 2022 - Febrero 2023",
-      description: t('home.experiences.little-taller'),
+      description: t('experiences.little-taller'),
       technologies: ["Node.js", "Express", "TypeScript", "Sequelize", "MySQL", "PostgreSQL", "Jest", "React", "Tailwind"],
       key: "little-taller"
     },
@@ -92,7 +92,7 @@ export default function Home() {
       title: "Middle Level Back-end Developer",
       company: "Adhoc TI",
       period: "Octubre 2019 - Mayo 2022",
-      description: t('home.experiences.adhoc-ti-2019'),
+      description: t('experiences.adhoc-ti-2019'),
       technologies: ["Node.js", "Express", "TypeScript", "Sequelize", "MySQL", "PostgreSQL", "Jest", "React", "Tailwind"],
       key: "adhoc-ti-2019"
     },
@@ -101,7 +101,7 @@ export default function Home() {
       company: "Academia global",
       url: 'https://academiaglobal.mx',
       period: "Noviembre 2013 - Julio 2019",
-      description: t('home.experiences.academia-global'),
+      description: t('experiences.academia-global'),
       technologies: ["PHP", "JavaScript", "MySQL", "PL/SQL", "AngularJS", "React"],
       key: "academia-global"
     }
@@ -127,7 +127,7 @@ export default function Home() {
       img: "/guiadehoy-mockup.webp",
       slug: 'guiadehoy',
       title: "GuiaDeHoy.com",
-      description: t('home.projects.guiadehoy'),
+      description: t('projects.guiadehoy'),
       technologies: ["React", "Next.js", "NestJS", "PostgreSQL", "Stripe"],
       year: "2024"
     },
@@ -135,7 +135,7 @@ export default function Home() {
       img: "/masttro-mock.avif",
       slug: 'manage-wealth',
       title: "Sistema de Gestión de Patrimonios",
-      description: t('home.projects.manage-wealth'),
+      description: t('projects.manage-wealth'),
       technologies: ["Python", "Selenium", "React", "Redux", "Highcharts"],
       year: "2024"
     },
@@ -143,7 +143,7 @@ export default function Home() {
       img: "/enrolados-mockup.webp",
       slug: 'enrolados',
       title: "Enrolados",
-      description: t('home.projects.enrolados'),
+      description: t('projects.enrolados'),
       technologies: ["React", "Node.js", "Sequelize", "Express", "MySQL"],
       year: "2022-2023"
     },
@@ -151,7 +151,7 @@ export default function Home() {
       img: "/blumi-mockup.webp",
       slug: 'blumi',
       title: "Blumi.App",
-      description: t('home.projects.blumi'),
+      description: t('projects.blumi'),
       technologies: ["React", "Node.js", "MySQL", "Sequelize"],
       year: "2022"
     },
@@ -159,7 +159,7 @@ export default function Home() {
       img: "/citicinemas-body-04.webp",
       slug: 'citicinemas',
       title: "Citicinemas",
-      description: t('home.projects.citicinemas'),
+      description: t('projects.citicinemas'),
       technologies: ["React", "Node.js", "MySQL", "Sequelize"],
       year: "2021-2022"
     },
@@ -167,7 +167,7 @@ export default function Home() {
       img: "/kanda-mockup.webp",
       slug: 'kanda',
       title: "Kanda",
-      description: t('home.projects.kanda'),
+      description: t('projects.kanda'),
       technologies: ["React", "Node.js", "MySQL", "Sequelize"],
       year: "2020-2021"
     },
@@ -400,7 +400,7 @@ export default function Home() {
               </div>
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{t('contact.whatsapp')}</h3>
               <a href="https://wa.me/526677769637" className="text-slate-600 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400">
-                +52 667 776 9637
+                +52 667 315 12 44
               </a>
             </div>
             <div className="flex flex-col items-center">
